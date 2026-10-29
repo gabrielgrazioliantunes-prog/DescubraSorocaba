@@ -10,3 +10,8 @@ Projeto acadêmico de Web Design – Guia turístico, gastronômico e cultural d
 - `info.html`: Informações práticas ao visitante, dúvidas frequentes e formulário de contato.
 - `assets/css/style.css`: Folha de estilos utilizando tipografia `Poppins` e `Montserrat`.
 - `assets/js/main.js`: Script de filtros, integração com o mapa e renderização em alta definição do pôr do sol.
+
+## Arquitetura de Diretorios
+- index.html, explorar.html, oteiros.html, galeria.html, info.html`n- ssets/css/style.css: Folha de estilos modular
+- ssets/js/main.js: Motor de busca, mapas e interatividade
+- ssets/media/: Acervo com 20 fotografias locais de Sorocaba
