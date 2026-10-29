@@ -1246,3 +1246,6 @@ body.dark-mode input, body.dark-mode select, body.dark-mode textarea { border-co
 
 /* Estilos para impressao de roteiros */
 @media print { header, footer, #scrollTopBtn, .btn-map-focus { display: none !important; } body { background: #fff; color: #000; } }
+
+/* Suporte adicional para monitores grandes */
+@media (min-width: 1440px) { .container { max-width: 1280px; margin: 0 auto; } }
