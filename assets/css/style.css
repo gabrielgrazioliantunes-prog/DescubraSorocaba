@@ -1213,3 +1213,6 @@ footer p {
 
 /* Estilo de selecao de texto */
 ::selection { background-color: #F4B41A; color: #0E1B30; }
+
+/* Comportamento de rolagem suave */
+html { scroll-behavior: smooth; }
