@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informações úteis ao visitante, perguntas frequentes (FAQ) e formulário de contacto e sugestões para o guia DescobraSorocaba.">
+    <title>DescobraSorocaba | Informações Úteis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">
+                <div class="brand-logo">DS</div>
+                <div class="brand-text">
+                    <strong>DescobraSorocaba</strong>
+                    <span id="i18n-subtitle">Guia Oficial do Visitante</span>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="explorar.html" class="nav-link">O que fazer & Mapa</a></li>
+                <li><a href="roteiros.html" class="nav-link">Roteiros & Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galeria & Mídia</a></li>
+                <li><a href="info.html" class="nav-link active">Informações Úteis</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button type="button" class="btn-icon" id="langBtn" title="Alternar Idioma PT/EN">PT</button>
+                <button type="button" class="btn-icon" id="themeBtn" title="Alternar Modo Escuro/Claro">🌙</button>
+                <button type="button" class="btn-roteiro" id="openFavModalBtn">
+                    🔖 <span class="label-text">Meu Roteiro</span> <span class="badge-count" id="favCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <div class="hero-badge">🛎️ CENTRAL DO VISITANTE • ATENDIMENTO & FAQ</div>
+                <h1>Informações Úteis & Fale Connosco</h1>
+                <p>Tire as suas dúvidas sobre mobilidade, gastronomia e parques em Sorocaba ou envie sugestões de novos estabelecimentos para o guia.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="maps-split-layout">
+                    <div>
+                        <span class="section-kicker">PERGUNTAS FREQUENTES</span>
+                        <h2 class="section-title" style="margin-bottom:1.25rem;">Dúvidas Comuns</h2>
+
+                        <div class="faq-item open">
+                            <button type="button" class="faq-question">
+                                Como pesquisar restaurantes e ir direto para o Google Maps? <span>▾</span>
+                            </button>
+                            <div class="faq-answer">
+                                Na página inicial ou no diretório "O que fazer & Mapa", digite o nome do restaurante ou tipo de comida. Ao clicar em "Ir ao Maps (Rota)", o Google Maps abre automaticamente com o endereço de destino preenchido.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button type="button" class="faq-question">
+                                A entrada nos parques de Sorocaba é gratuita? <span>▾</span>
+                            </button>
+                            <div class="faq-answer">
+                                Sim! O Jardim Botânico Irmãos Villas-Bôas, Parque das Águas, Parque Campolim, Parque Natural Chico Mendes e Parque da Biquinha têm entrada gratuita.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button type="button" class="faq-question">
+                                Qual é o prato típico mais famoso de Sorocaba? <span>▾</span>
+                            </button>
+                            <div class="faq-answer">
+                                Além da tradição tropeira (feijão tropeiro), a coxinha de frango com catupiry da Padaria Real é reconhecida em todo o país como símbolo gastronômico da cidade.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-card" style="padding:1.5rem;">
+                        <h3 style="margin-bottom:0.5rem;">Sugira um Estabelecimento ou Fale Connosco</h3>
+                        <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:1rem;">Envie dúvidas turísticas ou indique um restaurante em Sorocaba para o nosso guia.</p>
+                        <form id="contactForm">
+                            <div style="margin-bottom:0.75rem;">
+                                <label for="contactName" style="display:block; font-size:0.78rem; font-weight:600; margin-bottom:0.25rem;">Seu Nome</label>
+                                <input type="text" id="contactName" required style="width:100%; padding:0.65rem; border:1px solid var(--border-color); border-radius:6px; background:var(--bg-subtle); color:var(--text-primary);">
+                            </div>
+                            <div style="margin-bottom:0.75rem;">
+                                <label for="contactEmail" style="display:block; font-size:0.78rem; font-weight:600; margin-bottom:0.25rem;">Seu E-mail</label>
+                                <input type="email" id="contactEmail" required style="width:100%; padding:0.65rem; border:1px solid var(--border-color); border-radius:6px; background:var(--bg-subtle); color:var(--text-primary);">
+                            </div>
+                            <div style="margin-bottom:0.85rem;">
+                                <label for="contactMsg" style="display:block; font-size:0.78rem; font-weight:600; margin-bottom:0.25rem;">Mensagem</label>
+                                <textarea id="contactMsg" rows="3" required style="width:100%; padding:0.65rem; border:1px solid var(--border-color); border-radius:6px; background:var(--bg-subtle); color:var(--text-primary);"></textarea>
+                            </div>
+                            <button type="submit" class="btn-search" style="width:100%;">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="appModal" role="dialog" aria-modal="true">
+        <div class="modal-box" id="modalContent"></div>
+    </div>
+    <div class="toast" id="toastMsg" role="status" aria-live="polite"></div>
+    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem;">
+                <span>© 2026 DescobraSorocaba • Informações Úteis ao Visitante.</span>
+                <span id="dynamicGreeting">Bem-vindo a Sorocaba!</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
