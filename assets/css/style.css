@@ -1236,3 +1236,6 @@ html { scroll-behavior: smooth; }
 
 /* Destaque nos botoes de rota GPS */
 .btn-map-route:hover { box-shadow: 0 4px 12px rgba(244, 180, 26, 0.35); transform: translateY(-1px); }
+
+/* Ajuste de contraste de formularios no Dark Mode */
+body.dark-mode input, body.dark-mode select, body.dark-mode textarea { border-color: #334155; }
