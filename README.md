@@ -22,3 +22,6 @@ O portal conta com atualizacao dinamica de iframe do Google Maps e links diretos
 ## Acessibilidade e Usabilidade
 - Alternancia de tema Claro/Escuro persistente via localStorage`n- Sintese de voz nativa (Web Speech API) para audio-guia
 - Navegacao por teclado com suporte a tecla Escape e foco visivel
+
+## Como Executar Localmente
+1. Clone o repositorio: git clone https://github.com/gabrielgrazioliantunes-prog/DescubraSorocaba.git`n2. Abra a pasta no VS Code e inicie o arquivo index.html no navegador.
