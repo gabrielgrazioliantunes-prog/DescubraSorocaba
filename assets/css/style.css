@@ -1233,3 +1233,6 @@ html { scroll-behavior: smooth; }
 .gallery-item { overflow: hidden; border-radius: 10px; }
 .gallery-item img { transition: transform 0.35s ease; }
 .gallery-item:hover img { transform: scale(1.06); }
+
+/* Destaque nos botoes de rota GPS */
+.btn-map-route:hover { box-shadow: 0 4px 12px rgba(244, 180, 26, 0.35); transform: translateY(-1px); }
