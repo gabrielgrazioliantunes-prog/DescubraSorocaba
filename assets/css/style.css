@@ -1221,3 +1221,6 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #0E1B30; }
 ::-webkit-scrollbar-thumb { background: #F4B41A; border-radius: 5px; }
+
+/* Acessibilidade de foco via teclado */
+:focus-visible { outline: 2px solid #F4B41A; outline-offset: 3px; }
