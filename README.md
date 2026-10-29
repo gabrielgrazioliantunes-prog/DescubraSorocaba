@@ -15,3 +15,6 @@ Projeto acadêmico de Web Design – Guia turístico, gastronômico e cultural d
 - index.html, explorar.html, oteiros.html, galeria.html, info.html`n- ssets/css/style.css: Folha de estilos modular
 - ssets/js/main.js: Motor de busca, mapas e interatividade
 - ssets/media/: Acervo com 20 fotografias locais de Sorocaba
+
+## Integracao com Google Maps e Rotas GPS
+O portal conta com atualizacao dinamica de iframe do Google Maps e links diretos para navegacao GPS ponto a ponto em Sorocaba.
