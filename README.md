@@ -18,3 +18,7 @@ Projeto acadêmico de Web Design – Guia turístico, gastronômico e cultural d
 
 ## Integracao com Google Maps e Rotas GPS
 O portal conta com atualizacao dinamica de iframe do Google Maps e links diretos para navegacao GPS ponto a ponto em Sorocaba.
+
+## Acessibilidade e Usabilidade
+- Alternancia de tema Claro/Escuro persistente via localStorage`n- Sintese de voz nativa (Web Speech API) para audio-guia
+- Navegacao por teclado com suporte a tecla Escape e foco visivel
