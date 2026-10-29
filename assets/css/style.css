@@ -1243,3 +1243,6 @@ body.dark-mode input, body.dark-mode select, body.dark-mode textarea { border-co
 /* Animacao de entrada do Toast */
 @keyframes toastSlideIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 #toastMsg { animation: toastSlideIn 0.25s ease-out; }
+
+/* Estilos para impressao de roteiros */
+@media print { header, footer, #scrollTopBtn, .btn-map-focus { display: none !important; } body { background: #fff; color: #000; } }
