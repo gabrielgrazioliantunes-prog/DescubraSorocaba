@@ -478,3 +478,6 @@
 
 // Atalho de teclado: fechar modal com a tecla ESC
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const m = document.getElementById('appModal'); if (m) m.classList.remove('open'); } });
+
+// Monitoramento de status de rede para o mapa interativo
+window.addEventListener('offline', () => console.warn('Modo offline: mapas interativos requerem internet.'));
