@@ -487,3 +487,6 @@ window.addEventListener('load', () => { console.info('Portal DescubraSorocaba ca
 
 // Previne submissao duplicada acidental em formularios
 document.querySelectorAll('form').forEach(f => f.addEventListener('submit', () => { const b = f.querySelector('button[type=submit]'); if (b) { b.style.opacity = '0.9'; setTimeout(() => b.style.opacity = '1', 600); } }));
+
+// Atalho rapido: tecla '/' foca na barra de busca do Hero
+document.addEventListener('keydown', (e) => { if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') { const s = document.getElementById('searchQuery'); if (s) { e.preventDefault(); s.focus(); } } });
