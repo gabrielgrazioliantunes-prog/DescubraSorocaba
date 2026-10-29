@@ -484,3 +484,6 @@ window.addEventListener('offline', () => console.warn('Modo offline: mapas inter
 
 // Registro de telemetria basica de carregamento
 window.addEventListener('load', () => { console.info('Portal DescubraSorocaba carregado com sucesso.'); });
+
+// Previne submissao duplicada acidental em formularios
+document.querySelectorAll('form').forEach(f => f.addEventListener('submit', () => { const b = f.querySelector('button[type=submit]'); if (b) { b.style.opacity = '0.9'; setTimeout(() => b.style.opacity = '1', 600); } }));
