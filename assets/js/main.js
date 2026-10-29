@@ -59,15 +59,15 @@
         },
         {
             id: 'rest-2',
-            nome: 'Kojima Restaurante Japonês',
+            nome: 'Hioki Restaurante Japonês',
             categoria: 'restaurantes',
             bairro: 'Campolim / Mangal',
             nota: '4.7',
             endereco: 'Rua Francisca de Queiroz, 69',
             descricao: 'Gastronomia japonesa contemporânea com sushis autorais, cortes nobres e ambiente intimista.',
             imagem: 'assets/media/06-Hioki-restaurante.jpg',
-            altImagem: 'assets/media/06-kojima-restaurante.jpg',
-            queryMaps: 'Kojima Restaurante Japones, Sorocaba SP'
+            altImagem: 'assets/media/06-Hioki-restaurante.jpg',
+            queryMaps: 'Hioki Restaurante Japones, Sorocaba SP'
         },
         {
             id: 'rest-3',
