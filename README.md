@@ -98,17 +98,4 @@ DescubraSorocaba/
         └── 20-cafeterias-campolim.jpg
 ```
 
----
-
-## 🚀 Como Executar o Projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/gabrielgrazioliantunes-prog/DescubraSorocaba.git
-   ```
-2. Abra a pasta do projeto no **VS Code**.
-3. Execute com a extensão **Live Server** ou abra o arquivo `index.html` diretamente no navegador.
-
----
-
 © 2026 Projeto acadêmico de Web Design – **Descubra Sorocaba** • Facens
