@@ -481,3 +481,6 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const m 
 
 // Monitoramento de status de rede para o mapa interativo
 window.addEventListener('offline', () => console.warn('Modo offline: mapas interativos requerem internet.'));
+
+// Registro de telemetria basica de carregamento
+window.addEventListener('load', () => { console.info('Portal DescubraSorocaba carregado com sucesso.'); });
