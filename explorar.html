@@ -3,108 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore todos os restaurantes, padarias, parques ecológicos e museus de Sorocaba integrados ao Google Maps.">
-    <title>DescobraSorocaba | O que fazer & Mapa</title>
+    <meta name="description" content="Explore todos os restaurantes, padarias, parques e museus de Sorocaba no mapa.">
+    <title>Descubra Sorocaba | Explorar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="brand">
-                <div class="brand-logo">DS</div>
-                <div class="brand-text">
-                    <strong>DescobraSorocaba</strong>
-                    <span id="i18n-subtitle">Guia Oficial do Visitante</span>
-                </div>
-            </a>
-
-            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Início</a></li>
-                <li><a href="explorar.html" class="nav-link active">O que fazer & Mapa</a></li>
-                <li><a href="roteiros.html" class="nav-link">Roteiros & Cultura</a></li>
-                <li><a href="galeria.html" class="nav-link">Galeria & Mídia</a></li>
-                <li><a href="info.html" class="nav-link">Informações Úteis</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <button type="button" class="btn-icon" id="langBtn" title="Alternar Idioma PT/EN">PT</button>
-                <button type="button" class="btn-icon" id="themeBtn" title="Alternar Modo Escuro/Claro">🌙</button>
-                <button type="button" class="btn-roteiro" id="openFavModalBtn">
-                    🔖 <span class="label-text">Meu Roteiro</span> <span class="badge-count" id="favCount">0</span>
-                </button>
+    <header>
+        <a href="index.html" class="brand-logo">Descubra<strong>Sorocaba</strong></a>
+        <nav>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="explorar.html" class="active">Explorar</a>
+                <a href="roteiros.html">Roteiros</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="info.html">Sobre Nós</a>
             </div>
-        </div>
+        </nav>
+        <a href="info.html" class="btn-header">Contato</a>
     </header>
 
-    <main>
-        <section class="page-banner">
-            <div class="container">
-                <div class="hero-badge">🗺️ DIRETÓRIO GEOLOCALIZADO • SOROCABA, SP</div>
-                <h1>Restaurantes, Parques e Atrações no Mapa</h1>
-                <p>Filtre por categoria, visualize a localização exata no Google Maps ao lado ou clique para abrir a rota GPS até o estabelecimento.</p>
-            </div>
-        </section>
+    <section class="catalog-section">
+        <h2>Explore restaurantes, parques e atrações:</h2>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">CATÁLOGO VERIFICADO</span>
-                        <h2 class="section-title">Explore por Categoria</h2>
-                    </div>
-                    <div style="display:flex; gap:0.45rem; flex-wrap:wrap;" id="directoryFilterBar">
-                        <button type="button" class="tag-pill active" data-dir-filter="todos">Todos (12)</button>
-                        <button type="button" class="tag-pill" data-dir-filter="restaurantes">🍽️ Restaurantes</button>
-                        <button type="button" class="tag-pill" data-dir-filter="cafes">🥐 Padarias & Bares</button>
-                        <button type="button" class="tag-pill" data-dir-filter="parques">🌿 Parques</button>
-                        <button type="button" class="tag-pill" data-dir-filter="cultura">🏛️ Museus & História</button>
-                    </div>
-                </div>
+        <div class="search-bar-box">
+            <input type="text" id="directorySearchInput" placeholder="Pesquisar por nome, bairro ou tipo de local (ex: Campolim, coxinha, parque...)">
+            <button type="button" class="btn-primary" onclick="document.getElementById('googleMapsEmbed').scrollIntoView({behavior:'smooth'})">Ver Mapa</button>
+        </div>
 
-                <div class="maps-split-layout">
-                    <div class="responsive-cards-grid" id="fullDirectoryGrid"></div>
+        <div class="filter-bar">
+            <button type="button" class="filter-btn active" data-dir-filter="todos">Todos (12)</button>
+            <button type="button" class="filter-btn" data-dir-filter="restaurantes">Restaurantes</button>
+            <button type="button" class="filter-btn" data-dir-filter="cafes">Padarias & Bares</button>
+            <button type="button" class="filter-btn" data-dir-filter="parques">Parques</button>
+            <button type="button" class="filter-btn" data-dir-filter="cultura">História & Museus</button>
+        </div>
 
-                    <div class="live-map-sticky">
-                        <div class="live-map-header">
-                            <span id="liveMapHeaderTitle">📍 Mapa de Sorocaba</span>
-                            <a id="liveMapDirectRoute" href="https://www.google.com/maps/search/?api=1&query=Restaurantes+Sorocaba+SP" target="_blank" rel="noopener noreferrer" style="color:var(--amber); text-decoration:none; font-size:0.76rem;">
-                                Abrir no Google Maps ↗
-                            </a>
-                        </div>
-                        <iframe
-                            id="googleMapsEmbed"
-                            class="live-map-iframe"
-                            title="Mapa de Estabelecimentos de Sorocaba"
-                            loading="lazy"
-                            src="https://maps.google.com/maps?q=Restaurantes+e+Parques+Sorocaba+SP&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <div class="cards-grid" id="fullDirectoryGrid"></div>
 
-    <div class="modal-overlay" id="appModal" role="dialog" aria-modal="true">
-        <div class="modal-box" id="modalContent"></div>
-    </div>
-    <div class="toast" id="toastMsg" role="status" aria-live="polite"></div>
-    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
+        <div class="map-container">
+            <iframe
+                id="googleMapsEmbed"
+                title="Mapa de Estabelecimentos de Sorocaba"
+                loading="lazy"
+                src="https://maps.google.com/maps?q=Restaurantes+e+Parques+Sorocaba+SP&t=&z=13&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem;">
-                <span>© 2026 DescobraSorocaba • Diretório Integrado ao Google Maps.</span>
-                <span id="dynamicGreeting">Bem-vindo a Sorocaba!</span>
-            </div>
+    <footer>
+        <div class="footer-logos">
+            <span>Descubra<strong style="color:var(--primary);">Sorocaba</strong></span>
+            <span>•</span>
+            <span>Facens</span>
+        </div>
+        <div>
+            <p>© 2026 Projeto acadêmico de Web Design – Descubra Sorocaba</p>
         </div>
     </footer>
 
+    <a class="whatsapp-float" href="https://wa.me/5515999990000" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

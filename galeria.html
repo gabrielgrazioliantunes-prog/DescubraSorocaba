@@ -3,91 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galeria multimídia com mais de 20 fotos, animação em Canvas HTML5 e áudio-guia de Sorocaba.">
-    <title>DescobraSorocaba | Galeria & Mídia</title>
+    <meta name="description" content="Galeria de fotos dos pontos turísticos e gastronômicos de Sorocaba.">
+    <title>Descubra Sorocaba | Galeria</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="brand">
-                <div class="brand-logo">DS</div>
-                <div class="brand-text">
-                    <strong>DescobraSorocaba</strong>
-                    <span id="i18n-subtitle">Guia Oficial do Visitante</span>
-                </div>
-            </a>
-
-            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Início</a></li>
-                <li><a href="explorar.html" class="nav-link">O que fazer & Mapa</a></li>
-                <li><a href="roteiros.html" class="nav-link">Roteiros & Cultura</a></li>
-                <li><a href="galeria.html" class="nav-link active">Galeria & Mídia</a></li>
-                <li><a href="info.html" class="nav-link">Informações Úteis</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <button type="button" class="btn-icon" id="langBtn" title="Alternar Idioma PT/EN">PT</button>
-                <button type="button" class="btn-icon" id="themeBtn" title="Alternar Modo Escuro/Claro">🌙</button>
-                <button type="button" class="btn-roteiro" id="openFavModalBtn">
-                    🔖 <span class="label-text">Meu Roteiro</span> <span class="badge-count" id="favCount">0</span>
-                </button>
+    <header>
+        <a href="index.html" class="brand-logo">
+            Descubra<strong>Sorocaba</strong>
+        </a>
+        <nav>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="explorar.html">Explorar</a>
+                <a href="roteiros.html">Roteiros</a>
+                <a href="galeria.html" class="active">Galeria</a>
+                <a href="info.html">Sobre Nós</a>
             </div>
-        </div>
+        </nav>
+        <a href="explorar.html" class="btn-header">Ver Mapa</a>
     </header>
 
-    <main>
-        <section class="page-banner">
-            <div class="container">
-                <div class="hero-badge">📸 ACERVO VISUAL E SONORO • +20 MÍDIAS INTERATIVAS</div>
-                <h1>Galeria Multimídia de Sorocaba</h1>
-                <p>Explore 20 fotografias de alta definição com Lightbox interativo, animação panorâmica em HTML5 Canvas e narração por voz do Áudio-Guia.</p>
-            </div>
-        </section>
+    <section class="catalog-section">
+        <h2>Pontos Turísticos e Gastronomia:</h2>
+        <div class="cards-grid">
+            <article>
+                <img src="assets/media/01-jardim-botanico.jpg" alt="Jardim Botânico Irmãos Villas-Bôas" loading="lazy">
+                <h3>Jardim Botânico</h3>
+                <p>Jardim Dois Corações · Palácio de Cristal</p>
+            </article>
+            <article>
+                <img src="assets/media/02-zoo-quinzinho.jpg" alt="Zoológico Quinzinho de Barros" loading="lazy">
+                <h3>Zoo Quinzinho de Barros</h3>
+                <p>Vila Hortência · Conservação e Lazer</p>
+            </article>
+            <article>
+                <img src="assets/media/03-estacao-ferroviaria.jpg" alt="Estação Ferroviária e MACS" loading="lazy">
+                <h3>Estação Ferroviária & MACS</h3>
+                <p>Centro · Patrimônio Histórico</p>
+            </article>
+            <article>
+                <img src="assets/media/04-parque-das-aguas.jpg" alt="Parque das Águas" loading="lazy">
+                <h3>Parque das Águas</h3>
+                <p>Jardim Abaeté · Ciclovia e Lago</p>
+            </article>
+            <article>
+                <img src="assets/media/05-padaria-real.jpg" alt="Padaria Real" loading="lazy">
+                <h3>Padaria Real</h3>
+                <p>Parque Campolim · Tradição desde 1957</p>
+            </article>
+            <article>
+                <img src="assets/media/06-Hioki-restaurante.jpg" onerror="this.onerror=null;this.src='assets/media/06-kojima-restaurante.jpg';" alt="Kojima Restaurante Japonês" loading="lazy">
+                <h3>Kojima Restaurante Japonês</h3>
+                <p>Campolim / Mangal · Culinária Japonesa</p>
+            </article>
+            <article>
+                <img src="assets/media/07-botequim-francisca.jpg" alt="Botequim da Francisca" loading="lazy">
+                <h3>Botequim da Francisca</h3>
+                <p>Vila Independência · Boteco Premiado</p>
+            </article>
+            <article>
+                <img src="assets/media/08-tropical-grill.jpg" alt="Churrascaria Tropical Grill" loading="lazy">
+                <h3>Churrascaria Tropical Grill</h3>
+                <p>Jardim Faculdade · Carnes Nobres</p>
+            </article>
+            <article>
+                <img src="assets/media/09-la-doc-gastronomia.jpg" alt="La Doc Gastronomia" loading="lazy">
+                <h3>La Doc Gastronomia</h3>
+                <p>Centro · Cozinha Italiana</p>
+            </article>
+            <article>
+                <img src="assets/media/10-bar-do-alemao.jpg" alt="Bar do Alemão" loading="lazy">
+                <h3>Bar do Alemão</h3>
+                <p>Iguatemi Esplanada · Tradicional Parmegiana</p>
+            </article>
+            <article>
+                <img src="assets/media/11 -parque-campolim-sorocaba.jpg" onerror="this.onerror=null;this.src='assets/media/11-parque-campolim.jpg';" alt="Parque Carlos Alberto de Souza (Campolim)" loading="lazy">
+                <h3>Parque Carlos Alberto de Souza (Campolim)</h3>
+                <p>Parque Campolim · Caminhada e Esporte</p>
+            </article>
+            <article>
+                <img src="assets/media/12-mosteiro-sao-bento.jpg" alt="Mosteiro de São Bento" loading="lazy">
+                <h3>Mosteiro de São Bento</h3>
+                <p>Centro Histórico · Fundação 1660</p>
+            </article>
+            <article>
+                <img src="assets/media/13-ciclovia-dom-aguirre.jpg" alt="Ciclovia Marginal Dom Aguirre" loading="lazy">
+                <h3>Ciclovia Dom Aguirre</h3>
+                <p>Marginal Dom Aguirre · 130 km de ciclovias</p>
+            </article>
+            <article>
+                <img src="assets/media/14-parque-chico-mendes.jpg" alt="Parque Natural Chico Mendes" loading="lazy">
+                <h3>Parque Chico Mendes</h3>
+                <p>Alto da Boa Vista · Trilhas e Natureza</p>
+            </article>
+            <article>
+                <img src="assets/media/15-paco-municipal.jpg" alt="Paço Municipal de Sorocaba" loading="lazy">
+                <h3>Paço Municipal</h3>
+                <p>Alto da Boa Vista · Palácio dos Tropeiros</p>
+            </article>
+            <article>
+                <img src="assets/media/16-biblioteca-infantil.jpg" alt="Biblioteca Infantil Municipal" loading="lazy">
+                <h3>Biblioteca Infantil</h3>
+                <p>Centro · Casarão Cultural</p>
+            </article>
+            <article>
+                <img src="assets/media/17-catedral-sorocaba.jpg" alt="Catedral Metropolitana de Sorocaba" loading="lazy">
+                <h3>Catedral Metropolitana</h3>
+                <p>Praça Cel. Fernando Prestes · Centro</p>
+            </article>
+            <article>
+                <img src="assets/media/18-parque-biquinha.jpg" alt="Parque da Biquinha" loading="lazy">
+                <h3>Parque da Biquinha</h3>
+                <p>Jardim Vergueiro · Nascente Histórica</p>
+            </article>
+            <article>
+                <img src="assets/media/19-mercado-municipal.jpg" alt="Mercado Municipal de Sorocaba" loading="lazy">
+                <h3>Mercado Municipal</h3>
+                <p>Centro · Tradição desde 1938</p>
+            </article>
+            <article>
+                <img src="assets/media/20-cafeterias-campolim.jpg" alt="Cafeterias do Campolim" loading="lazy">
+                <h3>Cafeterias do Campolim</h3>
+                <p>Zona Sul · Cafés Especiais</p>
+            </article>
+        </div>
+    </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">EXPERIÊNCIA IMERSIVA</span>
-                        <h2 class="section-title">Tour Visual & Áudio-Guia</h2>
-                    </div>
-                    <button type="button" class="btn-roteiro" id="playAudioGuideBtn">🔊 Ouvir Narração do Guia</button>
-                </div>
-
-                <div class="place-card" style="padding:1.25rem; margin-bottom:1.75rem;">
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
-                        <strong>🎬 Tour Panorâmico Interativo: Pôr do Sol no Parque das Águas & Campolim</strong>
-                        <span class="place-badge">Mídia Interativa HTML5</span>
-                    </div>
-                    <canvas id="sorocabaVideoCanvas" width="900" height="220" style="width:100%; height:190px; border-radius:10px; background:#07101E;"></canvas>
-                </div>
-
-                <div class="gallery-grid" id="galleryGrid"></div>
-            </div>
-        </section>
-    </main>
-
-    <div class="modal-overlay" id="appModal" role="dialog" aria-modal="true">
-        <div class="modal-box" id="modalContent"></div>
-    </div>
-    <div class="toast" id="toastMsg" role="status" aria-live="polite"></div>
-    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
-
-    <footer class="footer">
-        <div class="container">
-            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem;">
-                <span>© 2026 DescobraSorocaba • Acervo Multimídia Oficial.</span>
-                <span id="dynamicGreeting">Bem-vindo a Sorocaba!</span>
-            </div>
+    <footer>
+        <div class="footer-logos">
+            <span>Descubra<strong style="color:var(--primary);">Sorocaba</strong></span>
+            <span>•</span>
+            <span>Facens</span>
+        </div>
+        <div>
+            <p>© 2026 Projeto acadêmico de Web Design – Descubra Sorocaba</p>
         </div>
     </footer>
+
+    <a class="whatsapp-float" aria-label="Falar pelo WhatsApp" href="https://wa.me/5515999990000" target="_blank" rel="noopener noreferrer">
+        Fale no WhatsApp
+    </a>
 
     <script src="assets/js/main.js"></script>
 </body>

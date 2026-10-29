@@ -3,351 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DescobraSorocaba - Guia Oficial do Visitante integrado ao Google Maps. Encontre restaurantes, parques, roteiros e pontos turísticos em Sorocaba.">
-    <title>DescobraSorocaba | Início</title>
+    <meta name="description" content="Descubra Sorocaba - Guia turístico, gastronômico e cultural de Sorocaba.">
+    <title>Descubra Sorocaba | Início</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="brand">
-                <div class="brand-logo">DS</div>
-                <div class="brand-text">
-                    <strong>DescobraSorocaba</strong>
-                    <span id="i18n-subtitle">Guia Oficial do Visitante</span>
-                </div>
-            </a>
-
-            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Início</a></li>
-                <li><a href="explorar.html" class="nav-link">O que fazer & Mapa</a></li>
-                <li><a href="roteiros.html" class="nav-link">Roteiros & Cultura</a></li>
-                <li><a href="galeria.html" class="nav-link">Galeria & Mídia</a></li>
-                <li><a href="info.html" class="nav-link">Informações Úteis</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <button type="button" class="btn-icon" id="langBtn" title="Alternar Idioma PT/EN">PT</button>
-                <button type="button" class="btn-icon" id="themeBtn" title="Alternar Modo Escuro/Claro">🌙</button>
-                <button type="button" class="btn-roteiro" id="openFavModalBtn">
-                    🔖 <span class="label-text">Meu Roteiro</span> <span class="badge-count" id="favCount">0</span>
-                </button>
+    <header>
+        <a href="index.html" class="brand-logo">
+            Descubra<strong>Sorocaba</strong>
+        </a>
+        <nav>
+            <div>
+                <a href="index.html" class="active">Início</a>
+                <a href="explorar.html">Explorar</a>
+                <a href="roteiros.html">Roteiros</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="info.html">Sobre Nós</a>
             </div>
-        </div>
+        </nav>
+        <a href="explorar.html" class="btn-header">Ver Mapa</a>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-badge">📍 SOROCABA, SP • PORTAL TURÍSTICO INTEGRADO AO GOOGLE MAPS</div>
-                <h1 id="i18n-hero-title">Conheça a história, respire a natureza e sinta Sorocaba.</h1>
-                <p>Da herança tropeira e do vapor ferroviário ao pôr do sol no Campolim. Pesquise restaurantes, padarias, parques e atrações conectados em tempo real ao Google Maps.</p>
-
-                <div class="search-card">
-                    <form id="mapsSearchForm" class="search-row">
-                        <div class="search-input-group">
-                            <span>🔍</span>
-                            <input type="text" id="searchQuery" placeholder="O que você está procurando? (Ex: restaurantes, sushi, padaria, parque...)" autocomplete="off">
-                        </div>
-                        <div class="search-input-group">
-                            <span>📂</span>
-                            <select id="searchCategory" aria-label="Filtrar por Categoria">
-                                <option value="todos">Categoria: Todas</option>
-                                <option value="restaurantes">Restaurantes & Gastronomia</option>
-                                <option value="cafes">Padarias, Cafés & Bares</option>
-                                <option value="parques">Parques & Natureza</option>
-                                <option value="cultura">Cultura & Patrimônio</option>
-                            </select>
-                        </div>
-                        <div class="search-input-group">
-                            <span>📍</span>
-                            <select id="searchRegion" aria-label="Filtrar por Região de Sorocaba">
-                                <option value="Sorocaba SP">Região: Toda Sorocaba</option>
-                                <option value="Parque Campolim Sorocaba SP">Zona Sul / Campolim</option>
-                                <option value="Centro Sorocaba SP">Centro Histórico</option>
-                                <option value="Santa Rosália Sorocaba SP">Santa Rosália / Vila Hortência</option>
-                                <option value="Jardim Abaeté Sorocaba SP">Zona Norte / Parque das Águas</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-search">🔎 Buscar</button>
-                    </form>
-
-                    <div class="quick-tags">
-                        <span>Sugestões rápidas no Maps:</span>
-                        <button type="button" class="tag-pill" data-quick-query="restaurantes" data-quick-cat="restaurantes">🍽️ Restaurantes</button>
-                        <button type="button" class="tag-pill" data-quick-query="Padaria Real" data-quick-cat="cafes">🥐 Padaria Real & Cafés</button>
-                        <button type="button" class="tag-pill" data-quick-query="bares Campolim" data-quick-cat="cafes">🍻 Bares no Campolim</button>
-                        <button type="button" class="tag-pill" data-quick-query="Jardim Botânico" data-quick-cat="parques">🌿 Jardim Botânico</button>
-                        <button type="button" class="tag-pill" data-quick-query="Zoológico Quinzinho de Barros" data-quick-cat="parques">🦁 Zoológico</button>
-                        <button type="button" class="tag-pill" data-quick-query="Estação Ferroviária MACS" data-quick-cat="cultura">🚂 Estação Ferroviária</button>
-                    </div>
-                </div>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Seu próximo passeio<br><strong>começa aqui.</strong></h1>
+                <p>Encontre parques, restaurantes e pontos históricos em poucos minutos, sem complicação. Nosso guia é rápido, prático e direto,<br> para você explorar Sorocaba<br>com muito mais praticidade.</p>
+                <a href="explorar.html" class="btn-primary">Explorar destinos</a>
             </div>
-        </section>
-
-        <!-- RESULTADOS DO GOOGLE MAPS -->
-        <section id="mapsResultsSection" class="maps-results-section" aria-live="polite">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">INTEGRAÇÃO GOOGLE MAPS • SOROCABA, SP</span>
-                        <h2 class="section-title" id="mapsResultsTitle">Estabelecimentos encontrados em Sorocaba</h2>
-                    </div>
-                    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-                        <a id="externalGoogleMapsSearchLink" href="https://www.google.com/maps/search/?api=1&query=restaurantes+em+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="btn-map-route" style="padding: 0.55rem 0.95rem;">
-                            🗺️ Ver Todos no App Google Maps ↗
-                        </a>
-                        <button type="button" class="btn-map-focus" id="closeMapsSectionBtn">✖ Fechar Painel</button>
-                    </div>
-                </div>
-
-                <div class="maps-split-layout">
-                    <div id="placesResultsContainer" class="responsive-cards-grid"></div>
-                    <div class="live-map-sticky">
-                        <div class="live-map-header">
-                            <span id="liveMapHeaderTitle">📍 Mapa Interativo de Sorocaba</span>
-                            <a id="liveMapDirectRoute" href="https://www.google.com/maps/search/?api=1&query=Sorocaba+SP" target="_blank" rel="noopener noreferrer" style="color:var(--amber); text-decoration:none; font-size:0.76rem;">
-                                Abrir Rota GPS ↗
-                            </a>
-                        </div>
-                        <iframe
-                            id="googleMapsEmbed"
-                            class="live-map-iframe"
-                            title="Mapa Oficial Google Maps Sorocaba"
-                            loading="lazy"
-                            src="https://maps.google.com/maps?q=Restaurantes+Parque+Campolim+Sorocaba+SP&t=&z=14&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Faixa de Estatísticas -->
-        <section class="stats-bar">
-            <div class="container stats-grid">
-                <div class="stat-item">
-                    <div class="stat-icon" style="background:var(--green-badge); color:var(--green-text);">🌳</div>
-                    <div class="stat-info">
-                        <strong>22+</strong>
-                        <span>Parques ecológicos e áreas verdes</span>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="background:var(--orange-badge); color:var(--orange-text);">🏛️</div>
-                    <div class="stat-info">
-                        <strong>370 Anos</strong>
-                        <span>De história tropeira e ferroviária</span>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="background:var(--blue-badge); color:var(--blue-text);">🚲</div>
-                    <div class="stat-info">
-                        <strong>130+ km</strong>
-                        <span>De ciclovias integradas na cidade</span>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="background:var(--purple-badge); color:var(--purple-text);">🍽️</div>
-                    <div class="stat-info">
-                        <strong>50+</strong>
-                        <span>Restaurantes e polos gastronômicos</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Eixos de Experiência -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">EXPLORE SOROCABA</span>
-                        <h2 class="section-title">Eixos de Experiência em Sorocaba</h2>
-                    </div>
-                </div>
-
-                <div class="axes-grid">
-                    <article class="axis-card" data-quick-query="parques ecológicos" data-quick-cat="parques">
-                        <div>
-                            <div class="axis-icon" style="background:var(--green-badge); color:var(--green-text);">🌿</div>
-                            <h3>Parques & Natureza</h3>
-                            <p>Jardim Botânico Irmãos Villas-Bôas, Parque das Águas, Parque Natural Chico Mendes e Biquinha.</p>
-                        </div>
-                        <span class="axis-link">Explorar parques no Maps →</span>
-                    </article>
-
-                    <article class="axis-card" data-quick-query="museus históricos" data-quick-cat="cultura">
-                        <div>
-                            <div class="axis-icon" style="background:var(--blue-badge); color:var(--blue-text);">🏛️</div>
-                            <h3>Cultura & Memória</h3>
-                            <p>Museu Histórico Sorocabano, Museu da Estrada de Ferro Sorocabana, MACS e Mosteiro de São Bento.</p>
-                        </div>
-                        <span class="axis-link">Conhecer história →</span>
-                    </article>
-
-                    <article class="axis-card" data-quick-query="restaurantes" data-quick-cat="restaurantes">
-                        <div>
-                            <div class="axis-icon" style="background:var(--orange-badge); color:var(--orange-text);">🍴</div>
-                            <h3>Gastronomia & Noite</h3>
-                            <p>Alta gastronomia no Campolim, a famosa coxinha da Padaria Real, cantinas e bares em Santa Rosália.</p>
-                        </div>
-                        <span class="axis-link">Ver restaurantes no Maps →</span>
-                    </article>
-
-                    <article class="axis-card" data-quick-query="ciclovia Marginal Dom Aguirre" data-quick-cat="parques">
-                        <div>
-                            <div class="axis-icon" style="background:var(--purple-badge); color:var(--purple-text);">🚴</div>
-                            <h3>Cicloturismo & Trilhas</h3>
-                            <p>Pedale pelas margens do Rio Sorocaba em uma das redes cicloviárias mais premiadas do país.</p>
-                        </div>
-                        <span class="axis-link">Abrir mapa de ciclovias →</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Atrativos Imperdíveis -->
-        <section class="section" style="padding-top:0;">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">DESTAQUES DA ESTAÇÃO</span>
-                        <h2 class="section-title">Atrativos Imperdíveis</h2>
-                    </div>
-                    <a href="explorar.html" class="nav-link">Ver todos os restaurantes e lugares →</a>
-                </div>
-
-                <div class="attractions-grid" id="homeAttractionsGrid"></div>
-            </div>
-        </section>
-
-        <!-- Planeje sua Visita + Newsletter -->
-        <section class="section" style="padding-top:0;">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">INFORMAÇÕES PRÁTICAS</span>
-                        <h2 class="section-title">Planeje sua Visita a Sorocaba</h2>
-                    </div>
-                </div>
-
-                <div class="plan-cards-grid">
-                    <div class="plan-mini-card">
-                        <span style="font-size:1.3rem;">☀️</span>
-                        <h4>Clima e Temporada</h4>
-                        <p>Clima subtropical com dias ensolarados ideais para parques entre abril e outubro. Média anual de 21°C.</p>
-                    </div>
-                    <div class="plan-mini-card">
-                        <span style="font-size:1.3rem;">🚗</span>
-                        <h4>Acesso Rodoviário</h4>
-                        <p>A 90 km de São Paulo pelas rodovias Castello Branco (SP-280) e Raposo Tavares (SP-270).</p>
-                    </div>
-                    <div class="plan-mini-card">
-                        <span style="font-size:1.3rem;">🚌</span>
-                        <h4>Mobilidade Integrada</h4>
-                        <p>Sistema BRT Sorocaba, terminais integrados e mais de 130 km de ciclovias sinalizadas.</p>
-                    </div>
-                    <div class="plan-mini-card">
-                        <span style="font-size:1.3rem;">🛎️</span>
-                        <h4>Apoio ao Turista (CIT)</h4>
-                        <p>Atendimento presencial e mapas gratuitos na Casa do Turista no Parque Campolim.</p>
-                    </div>
-                </div>
-
-                <div class="plan-map-box">
-                    <iframe
-                        style="width:100%; height:270px; border:0; border-radius:10px;"
-                        loading="lazy"
-                        title="Mapa Geral de Pontos Turísticos e Restaurantes de Sorocaba"
-                        src="https://maps.google.com/maps?q=Pontos+Turisticos+e+Restaurantes+Sorocaba+SP&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                    </iframe>
-                    <div>
-                        <span class="section-kicker">NAVEGAÇÃO INTERATIVA</span>
-                        <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:0.6rem;">Explore pontos de apoio, restaurantes e atrações próximas</h3>
-                        <p style="font-size:0.86rem; color:var(--text-secondary); margin-bottom:1.1rem;">
-                            Visualize os estabelecimentos no Google Maps e clique em qualquer restaurante ou parque para iniciar a navegação GPS até a porta do local.
-                        </p>
-                        <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-                            <button type="button" class="btn-roteiro" data-quick-query="restaurantes" data-quick-cat="restaurantes">🍽️ Buscar Restaurantes no Maps</button>
-                            <a href="explorar.html" class="btn-map-focus">🗺️ Abrir Catálogo Completo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="newsletter-box">
-                    <div style="font-size:1.75rem; margin-bottom:0.4rem;">✉️</div>
-                    <h2 style="font-size:1.55rem; font-weight:800; margin-bottom:0.4rem;">Boletim do Viajante de Sorocaba</h2>
-                    <p style="color:#CBD5E1; font-size:0.88rem; max-width:520px; margin:0 auto;">
-                        Receba uma curadoria mensal com eventos culturais, novos restaurantes e roteiros gratuitos em Sorocaba.
-                    </p>
-                    <form id="newsletterForm" class="newsletter-form">
-                        <input type="email" id="newsletterEmail" placeholder="Digite seu melhor e-mail..." required aria-label="Seu e-mail">
-                        <button type="submit" class="btn-search">Inscrever-se</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="modal-overlay" id="appModal" role="dialog" aria-modal="true">
-        <div class="modal-box" id="modalContent"></div>
-    </div>
-    <div class="toast" id="toastMsg" role="status" aria-live="polite"></div>
-    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="brand" style="margin-bottom:0.65rem;">
-                        <div class="brand-logo">DS</div>
-                        <div class="brand-text">
-                            <strong>DescobraSorocaba</strong>
-                            <span>Guia Oficial do Visitante</span>
-                        </div>
-                    </div>
-                    <p>Plataforma turística e gastronômica de Sorocaba integrada com busca de estabelecimentos e rotas GPS no Google Maps.</p>
-                </div>
-                <div>
-                    <h4>Páginas do Portal</h4>
-                    <ul>
-                        <li><a href="index.html" style="color:inherit; text-decoration:none;">Início & Busca</a></li>
-                        <li><a href="explorar.html" style="color:inherit; text-decoration:none;">O que fazer & Mapa</a></li>
-                        <li><a href="roteiros.html" style="color:inherit; text-decoration:none;">Roteiros & Cultura</a></li>
-                        <li><a href="galeria.html" style="color:inherit; text-decoration:none;">Galeria Multimídia</a></li>
-                        <li><a href="info.html" style="color:inherit; text-decoration:none;">Informações Úteis</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Atendimento ao Turista</h4>
-                    <ul>
-                        <li><strong>CIT Parque Campolim</strong></li>
-                        <li>Av. Antônio Carlos Comitre - Sorocaba/SP</li>
-                        <li>Seg a Sex, 08h às 17h</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Telefones Úteis</h4>
-                    <ul>
-                        <li>SAMU: <strong>192</strong></li>
-                        <li>Polícia Militar: <strong>190</strong></li>
-                        <li>Bombeiros: <strong>193</strong></li>
-                        <li>Urbes Trânsito: <strong>118</strong></li>
-                    </ul>
-                </div>
-            </div>
-            <div style="border-top:1px solid var(--border-color); padding-top:1.15rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; font-size:0.76rem;">
-                <span>© 2026 DescobraSorocaba • Portal Turístico Responsivo.</span>
-                <span id="dynamicGreeting">Bem-vindo a Sorocaba!</span>
+            <div class="hero-image">
+                <img src="assets/media/01-jardim-botanico.jpg" alt="Capa Descubra Sorocaba - Jardim Botânico">
             </div>
         </div>
+
+        <div class="quote-block">
+            <div class="quote-divider">
+                <span></span>
+                <span class="quote-mark">“</span>
+                <span></span>
+            </div>
+            <p>Cada canto de Sorocaba tem uma personalidade única, e a gente se apaixona por cada uma delas.</p>
+            <span class="quote-author">DESCUBRA SOROCABA</span>
+        </div>
+    </section>
+
+    <section class="pillars-section">
+        <article class="pillars-header">
+            <h2>EXPERIÊNCIAS</h2>
+            <p class="subtitle">Lugares que fazem parte da nossa história</p>
+            <p>Selecionamos os principais polos de lazer, cultura e gastronomia da<br>cidade.</p>
+        </article>
+
+        <article class="pillars-grid">
+            <div class="pillar-card">
+                <img src="assets/media/04-parque-das-aguas.jpg" alt="Parques de Sorocaba">
+                <p><strong>Parques & Ciclovias</strong><br>Destaque oficial</p>
+            </div>
+            <div class="pillar-card">
+                <img src="assets/media/05-padaria-real.jpg" alt="Gastronomia de Sorocaba">
+                <p><strong>Gastronomia & Bares</strong><br>Destaque oficial</p>
+            </div>
+            <div class="pillar-card">
+                <img src="assets/media/03-estacao-ferroviaria.jpg" alt="História de Sorocaba">
+                <p><strong>Cultura & Memória</strong><br>Destaque oficial</p>
+            </div>
+        </article>
+    </section>
+
+    <section class="catalog-section">
+        <h2>Lugares em destaque:</h2>
+        <div class="cards-grid">
+
+            <article>
+                <img src="assets/media/01-jardim-botanico.jpg" alt="Jardim Botânico Irmãos Villas-Bôas" loading="lazy">
+                <h3>Jardim Botânico</h3>
+                <p>Jardim Dois Corações · Parque · ★ 4.9<br>
+                    <strong>Entrada Gratuita<br></strong>
+                    Cartão-postal com o Palácio de Cristal, orquidário, mirante e coleções botânicas do Cerrado e Mata Atlântica.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Jardim+Botanico+Irmaos+Villas+Boas+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/02-zoo-quinzinho.jpg" alt="Parque Zoológico Quinzinho de Barros" loading="lazy">
+                <h3>Zoo Quinzinho de Barros</h3>
+                <p>Vila Hortência · Lazer & Fauna · ★ 4.8<br>
+                    <strong>Rua Teodoro Kaisel, 883<br></strong>
+                    Referência na América Latina em conservação da fauna, pesquisa e lazer educativo em meio à Mata Atlântica.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Parque+Zoologico+Quinzinho+de+Barros+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/03-estacao-ferroviaria.jpg" alt="Estação Ferroviária e MACS" loading="lazy">
+                <h3>Estação & Museu MACS</h3>
+                <p>Centro · Patrimônio Histórico · ★ 4.7<br>
+                    <strong>Av. Dr. Afonso Vergueiro, 280<br></strong>
+                    Complexo histórico da Estrada de Ferro Sorocabana integrado ao Museu de Arte Contemporânea.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Museu+de+Arte+Contemporanea+de+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/04-parque-das-aguas.jpg" alt="Parque das Águas" loading="lazy">
+                <h3>Parque das Águas</h3>
+                <p>Jardim Abaeté · Lazer & Ciclovia · ★ 4.8<br>
+                    <strong>Entrada Gratuita<br></strong>
+                    Amplo complexo de lazer com lago, ciclovia, pista de skate e pôr do sol às margens do Rio Sorocaba.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Parque+das+Aguas+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/05-padaria-real.jpg" alt="Padaria Real Campolim" loading="lazy">
+                <h3>Padaria Real</h3>
+                <p>Parque Campolim · Padaria & Café · ★ 4.8<br>
+                    <strong>Av. Antônio Carlos Comitre, 475<br></strong>
+                    Tradicional ponto de encontro famoso nacionalmente pela clássica coxinha de frango com catupiry.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Padaria+Real+Campolim+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/06-Hioki-restaurante.jpg" onerror="this.onerror=null;this.src='assets/media/06-kojima-restaurante.jpg';" alt="Kojima Restaurante Japonês" loading="lazy">
+                <h3>Kojima Restaurante Japonês</h3>
+                <p>Campolim / Mangal · Japonês · ★ 4.7<br>
+                    <strong>Rua Francisca de Queiroz, 69<br></strong>
+                    Gastronomia japonesa contemporânea com sushis autorais, cortes nobres e ambiente intimista.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Kojima+Restaurante+Japones+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/07-botequim-francisca.jpg" alt="Botequim da Francisca" loading="lazy">
+                <h3>Botequim da Francisca</h3>
+                <p>Vila Independência · Bar & Boteco · ★ 4.7<br>
+                    <strong>Rua Francisca de Queiroz, 125<br></strong>
+                    Premiado bar sorocabano com petiscos clássicos, feijoada aos sábados e chope gelado.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Botequim+da+Francisca+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/08-tropical-grill.jpg" alt="Churrascaria Tropical Grill" loading="lazy">
+                <h3>Churrascaria Tropical Grill</h3>
+                <p>Jardim Faculdade · Churrascaria · ★ 4.6<br>
+                    <strong>Av. General Carneiro, 40<br></strong>
+                    Rodízio tradicional de carnes nobres, buffet completo de saladas, massas e sobremesas.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Churrascaria+Tropical+Grill+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/09-la-doc-gastronomia.jpg" alt="La Doc Gastronomia Italiana" loading="lazy">
+                <h3>La Doc Gastronomia</h3>
+                <p>Centro · Cantina & Vinhos · ★ 4.8<br>
+                    <strong>Rua Francisco Scarpa, 279<br></strong>
+                    Massas artesanais, risotos e carnes com inspiração italiana no coração de Sorocaba.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=La+Doc+Gastronomia+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/10-bar-do-alemao.jpg" alt="Bar do Alemão" loading="lazy">
+                <h3>Bar do Alemão</h3>
+                <p>Campolim · Clássico Parmegiana · ★ 4.6<br>
+                    <strong>Av. Gisele Constantino, 1850<br></strong>
+                    Famoso pelo Filé à Parmegiana, pratos típicos alemães e chope tirado com colarinho cremoso.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Bar+do+Alemao+Iguatemi+Esplanada+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/11 -parque-campolim-sorocaba.jpg" onerror="this.onerror=null;this.src='assets/media/11-parque-campolim.jpg';" alt="Parque Carlos Alberto de Souza (Campolim)" loading="lazy">
+                <h3>Parque Carlos Alberto de Souza</h3>
+                <p>Parque Campolim · Caminhada · ★ 4.8<br>
+                    <strong>Av. Antônio Carlos Comitre, s/n<br></strong>
+                    Pista de caminhada arborizada cercada pelos principais restaurantes, cafés e edifícios da Zona Sul.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Parque+Campolim+Carlos+Alberto+de+Souza+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+            <article>
+                <img src="assets/media/12-mosteiro-sao-bento.jpg" alt="Mosteiro de São Bento" loading="lazy">
+                <h3>Mosteiro de São Bento</h3>
+                <p>Centro Histórico · Fundação 1660 · ★ 4.9<br>
+                    <strong>Largo de São Bento, s/n<br></strong>
+                    Marco zero da história de Sorocaba, fundado no século XVII por Baltasar Fernandes.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Mosteiro+de+Sao+Bento+Sorocaba+SP" target="_blank" rel="noopener noreferrer" class="card-link">Ver rota no Google Maps</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="help-section">
+        <div class="help-container">
+            <p>Precisa de ajuda?</p>
+            <h2>Estamos aqui para ajudar.</h2>
+            <p>Ficou com alguma dúvida ou quer sugerir um estabelecimento? Escolha como prefere falar com o Descubra Sorocaba.</p>
+
+            <div class="contact-cards">
+                <a href="https://wa.me/5515999990000" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <span>
+                        <strong>WhatsApp</strong>
+                        <small>(15) 99999-0000</small>
+                    </span>
+                    <em>Resposta rápida</em>
+                </a>
+
+                <a href="info.html" class="contact-card">
+                    <span>
+                        <strong>E-mail & Atendimento</strong>
+                        <small>Casa do Turista – Parque Campolim</small>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="dual-banners">
+            <a href="roteiros.html" class="banner-link">
+                <img src="assets/media/13-ciclovia-dom-aguirre.jpg" alt="Roteiros em Sorocaba">
+                <div class="banner-overlay">
+                    <h3>Roteiros de Fim de Semana</h3>
+                    <span>Percursos prontos de gastronomia, história e parques</span>
+                </div>
+            </a>
+            <a href="galeria.html" class="banner-link">
+                <img src="assets/media/15-paco-municipal.jpg" alt="Galeria de Sorocaba">
+                <div class="banner-overlay">
+                    <h3>Galeria & Pôr do Sol</h3>
+                    <span>Veja os pontos turísticos de Sorocaba em alta definição</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logos">
+            <span>Descubra<strong style="color:var(--primary);">Sorocaba</strong></span>
+            <span>•</span>
+            <span>Facens</span>
+        </div>
+        <div>
+            <p>© 2026 Projeto acadêmico de Web Design – Descubra Sorocaba</p>
+        </div>
     </footer>
+
+    <a class="whatsapp-float" aria-label="Falar com o Descubra Sorocaba pelo WhatsApp" href="https://wa.me/5515999990000?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20Descubra%20Sorocaba." target="_blank" rel="noopener noreferrer">
+        Fale no WhatsApp
+    </a>
 
     <script src="assets/js/main.js"></script>
 </body>

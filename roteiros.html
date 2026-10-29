@@ -3,142 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Roteiros prontos para o fim de semana em Sorocaba com rotas multi-paradas no Google Maps.">
-    <title>DescobraSorocaba | Roteiros & Cultura</title>
+    <meta name="description" content="Roteiros prontos para o fim de semana em Sorocaba.">
+    <title>Descubra Sorocaba | Roteiros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="brand">
-                <div class="brand-logo">DS</div>
-                <div class="brand-text">
-                    <strong>DescobraSorocaba</strong>
-                    <span id="i18n-subtitle">Guia Oficial do Visitante</span>
-                </div>
-            </a>
-
-            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Início</a></li>
-                <li><a href="explorar.html" class="nav-link">O que fazer & Mapa</a></li>
-                <li><a href="roteiros.html" class="nav-link active">Roteiros & Cultura</a></li>
-                <li><a href="galeria.html" class="nav-link">Galeria & Mídia</a></li>
-                <li><a href="info.html" class="nav-link">Informações Úteis</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <button type="button" class="btn-icon" id="langBtn" title="Alternar Idioma PT/EN">PT</button>
-                <button type="button" class="btn-icon" id="themeBtn" title="Alternar Modo Escuro/Claro">🌙</button>
-                <button type="button" class="btn-roteiro" id="openFavModalBtn">
-                    🔖 <span class="label-text">Meu Roteiro</span> <span class="badge-count" id="favCount">0</span>
-                </button>
+    <header>
+        <a href="index.html" class="brand-logo">Descubra<strong>Sorocaba</strong></a>
+        <nav>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="explorar.html">Explorar</a>
+                <a href="roteiros.html" class="active">Roteiros</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="info.html">Sobre Nós</a>
             </div>
-        </div>
+        </nav>
+        <a href="explorar.html" class="btn-header">Ver Mapa</a>
     </header>
 
-    <main>
-        <section class="page-banner">
-            <div class="container">
-                <div class="hero-badge">🧭 PLANEAMENTO DE VIAGEM • SOROCABA, SP</div>
-                <h1>Roteiros Prontos e Cultura Tropeira</h1>
-                <p>Escolha um itinerário temático para o seu fim de semana e abra o percurso completo no Google Maps com todas as paragens configuradas.</p>
-            </div>
-        </section>
+    <section class="catalog-section">
+        <h2>Roteiros sugeridos para o fim de semana:</h2>
+        <div class="cards-grid">
+            <article>
+                <img src="assets/media/01-jardim-botanico.jpg" alt="Sorocaba em 48 Horas">
+                <h3>Sorocaba em 48 Horas</h3>
+                <p>Fim de Semana · Parques & Gastronomia<br>
+                    <strong>3 Paradas Principais<br></strong>
+                    Dia 1 no Jardim Botânico e Estação Ferroviária (MACS). Dia 2 no Zoológico Quinzinho de Barros e jantar no Campolim.
+                </p>
+                <a href="https://www.google.com/maps/dir/Jardim+Botanico+Irmaos+Villas+Boas+Sorocaba/Museu+de+Arte+Contemporanea+de+Sorocaba/Parque+Campolim+Sorocaba" target="_blank" rel="noopener noreferrer" class="card-link">Abrir roteiro no Google Maps</a>
+            </article>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">PERSONALIZADOR INTERATIVO</span>
-                        <h2 class="section-title">Selecione o seu Perfil de Viajante</h2>
-                    </div>
-                    <div style="display:flex; gap:0.45rem; flex-wrap:wrap;">
-                        <button type="button" class="tag-pill active" data-custom-plan="gastronomia">🍷 Foco em Gastronomia</button>
-                        <button type="button" class="tag-pill" data-custom-plan="natureza">🌿 Foco em Natureza & Bike</button>
-                        <button type="button" class="tag-pill" data-custom-plan="historia">🚂 Foco em História & Cultura</button>
-                    </div>
-                </div>
+            <article>
+                <img src="assets/media/12-mosteiro-sao-bento.jpg" alt="Caminho dos Tropeiros">
+                <h3>Caminho dos Tropeiros</h3>
+                <p>Meio Período · História & Sabores<br>
+                    <strong>Centro ao Campolim<br></strong>
+                    Manhã no Mosteiro de São Bento e Catedral Metropolitana, fechando a tarde com a tradicional coxinha da Padaria Real.
+                </p>
+                <a href="https://www.google.com/maps/dir/Mosteiro+de+Sao+Bento+Sorocaba/Padaria+Real+Campolim+Sorocaba" target="_blank" rel="noopener noreferrer" class="card-link">Abrir roteiro no Google Maps</a>
+            </article>
 
-                <div id="customPlanOutput" class="place-card" style="padding:1.5rem; margin-bottom:2.5rem;"></div>
+            <article>
+                <img src="assets/media/04-parque-das-aguas.jpg" alt="Roteiro Natureza e Ciclovia">
+                <h3>Dia Verde & Ciclovias</h3>
+                <p>Ao Ar Livre · Família & Esporte<br>
+                    <strong>Entrada Gratuita<br></strong>
+                    Passeio matinal pelo Zoológico Municipal seguido de pedalada pela ciclovia e pôr do sol no Parque das Águas.
+                </p>
+                <a href="https://www.google.com/maps/dir/Parque+Zoologico+Municipal+Quinzinho+de+Barros+Sorocaba/Parque+das+Aguas+Sorocaba" target="_blank" rel="noopener noreferrer" class="card-link">Abrir roteiro no Google Maps</a>
+            </article>
 
-                <div class="section-header">
-                    <div>
-                        <span class="section-kicker">SUGESTÕES DE IMERSÃO</span>
-                        <h2 class="section-title">Roteiros Prontos para o Fim de Semana</h2>
-                    </div>
-                </div>
+            <article>
+                <img src="assets/media/06-Hioki-restaurante.jpg" onerror="this.onerror=null;this.src='assets/media/06-kojima-restaurante.jpg';" alt="Circuito Gastronômico de Sorocaba">
+                <h3>Rota Gastronômica</h3>
+                <p>Dia Inteiro · Café, Almoço & Jantar<br>
+                    <strong>Campolim & Centro<br></strong>
+                    Café da manhã na Padaria Real, almoço italiano no La Doc e jantar japonês no Kojima ou petiscos no Botequim da Francisca.
+                </p>
+                <a href="https://www.google.com/maps/dir/Padaria+Real+Campolim+Sorocaba/La+Doc+Gastronomia+Sorocaba/Kojima+Restaurante+Japones+Sorocaba" target="_blank" rel="noopener noreferrer" class="card-link">Abrir roteiro no Google Maps</a>
+            </article>
+        </div>
+    </section>
 
-                <div class="itineraries-grid">
-                    <div class="itinerary-card">
-                        <div>
-                            <span class="place-badge">48 Horas</span>
-                            <h3 style="margin:0.6rem 0; font-size:1.05rem;">Sorocaba em 48 Horas: O Essencial</h3>
-                            <p style="font-size:0.82rem; color:var(--text-secondary);">Um giro equilibrado entre os cartões-postais ecológicos e os restaurantes do Campolim.</p>
-                            <ul class="itinerary-steps">
-                                <li><strong>Dia 1:</strong> Jardim Botânico + Estação Ferroviária & MACS</li>
-                                <li><strong>Dia 2:</strong> Zoo Quinzinho de Barros + Jantar no Campolim</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.google.com/maps/dir/Jardim+Botanico+Irmaos+Villas+Boas+Sorocaba/Museu+de+Arte+Contemporanea+de+Sorocaba/Parque+Campolim+Sorocaba" target="_blank" rel="noopener noreferrer" class="btn-map-route">
-                            🧭 Abrir Roteiro no Google Maps ↗
-                        </a>
-                    </div>
-
-                    <div class="itinerary-card">
-                        <div>
-                            <span class="place-badge">História & Café</span>
-                            <h3 style="margin:0.6rem 0; font-size:1.05rem;">Caminho dos Tropeiros: Memória & Sabores</h3>
-                            <p style="font-size:0.82rem; color:var(--text-secondary);">Da herança histórica do Centro aos sabores clássicos das padarias e cantinas sorocabanas.</p>
-                            <ul class="itinerary-steps">
-                                <li><strong>10h00:</strong> Mosteiro de São Bento e Catedral Metropolitana</li>
-                                <li><strong>16h00:</strong> Coxinha tradicional na Padaria Real + Café</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.google.com/maps/dir/Mosteiro+de+Sao+Bento+Sorocaba/Padaria+Real+Campolim+Sorocaba" target="_blank" rel="noopener noreferrer" class="btn-map-route">
-                            🧭 Abrir Roteiro no Google Maps ↗
-                        </a>
-                    </div>
-
-                    <div class="itinerary-card">
-                        <div>
-                            <span class="place-badge" style="background:var(--green-badge); color:var(--green-text);">Família & Bike</span>
-                            <h3 style="margin:0.6rem 0; font-size:1.05rem;">Dia Verde: Parques, Zoo & Pôr do Sol</h3>
-                            <p style="font-size:0.82rem; color:var(--text-secondary);">Roteiro ao ar livre ideal para famílias e ciclistas acompanhando o Rio Sorocaba.</p>
-                            <ul class="itinerary-steps">
-                                <li><strong>Manhã:</strong> Zoológico Municipal Quinzinho de Barros</li>
-                                <li><strong>Fim de tarde:</strong> Ciclovia e pôr do sol no Parque das Águas</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.google.com/maps/dir/Parque+Zoologico+Municipal+Quinzinho+de+Barros+Sorocaba/Parque+das+Aguas+Sorocaba" target="_blank" rel="noopener noreferrer" class="btn-map-route">
-                            🧭 Abrir Roteiro no Google Maps ↗
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="modal-overlay" id="appModal" role="dialog" aria-modal="true">
-        <div class="modal-box" id="modalContent"></div>
-    </div>
-    <div class="toast" id="toastMsg" role="status" aria-live="polite"></div>
-    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
-
-    <footer class="footer">
-        <div class="container">
-            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem;">
-                <span>© 2026 DescobraSorocaba • Roteiros Culturais e Gastronômicos.</span>
-                <span id="dynamicGreeting">Bem-vindo a Sorocaba!</span>
-            </div>
+    <footer>
+        <div class="footer-logos">
+            <span>Descubra<strong style="color:var(--primary);">Sorocaba</strong></span>
+            <span>•</span>
+            <span>Facens</span>
+        </div>
+        <div>
+            <p>© 2026 Projeto acadêmico de Web Design – Descubra Sorocaba</p>
         </div>
     </footer>
 
+    <a class="whatsapp-float" href="https://wa.me/5515999990000" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
