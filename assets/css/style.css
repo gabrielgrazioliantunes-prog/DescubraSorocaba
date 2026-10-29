@@ -1224,3 +1224,7 @@ html { scroll-behavior: smooth; }
 
 /* Acessibilidade de foco via teclado */
 :focus-visible { outline: 2px solid #F4B41A; outline-offset: 3px; }
+
+/* Transicao nos badges dos cards */
+.place-badge, .badge-top-left { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.place-badge:hover { transform: scale(1.04); }
