@@ -475,3 +475,6 @@
         });
     });
 })();
+
+// Atalho de teclado: fechar modal com a tecla ESC
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const m = document.getElementById('appModal'); if (m) m.classList.remove('open'); } });
